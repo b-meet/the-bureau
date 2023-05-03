@@ -1,9 +1,13 @@
 import { GoPrimitiveDot } from "react-icons/go";
 
-const CreditLine = () => {
+const CreditLine = ({ author, isHero }) => {
 	return (
-		<div className='text-xs text-slate-300 flex items-center gap-3'>
-			<span>San Cooper</span>
+		<div
+			className={`text-xs ${
+				isHero ? "text-slate-300" : "text-slate-800"
+			} flex items-center gap-3`}
+		>
+			<span>{author}</span>
 			<span>
 				<GoPrimitiveDot />
 			</span>

@@ -2,21 +2,23 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { BsSearch } from "react-icons/bs";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { utilitySliceActions } from "@/redux/slice/utilitySlice";
+import SearchModal from "../modals/homepage/SearchModal";
+import routes from "@/RouteConstant";
 
 const Header = () => {
 	const navbarItems = [
-		{ title: "investigations", link: "investigations" },
-		{ title: "geopolitics and finance", link: "geopolitics-finance" },
-		{ title: "Health", link: "health" },
+		{ title: "investigations", link: routes.INVESTIGATION },
+		{ title: "geopolitics and finance", link: routes.GEOPOLITICS_FINANCE },
+		{ title: "Health", link: routes.HEALTH },
 		{ title: "Logo", link: "/" },
-		{ title: "technology", link: "technology" },
-		{ title: "national security", link: "national-security" },
-		{ title: "Op/analysis", link: "op-analysis" },
+		{ title: "technology", link: routes.TECHNOLOGY },
+		{ title: "national security", link: routes.NATIONAL_SECURITY },
+		{ title: "Op/analysis", link: routes.OP_ANALYSIS },
 	];
-
+	const { isSearchModalOpen } = useSelector((state) => state.utils);
 	const dispatch = useDispatch();
 	const navRef = useRef();
 
@@ -76,6 +78,7 @@ const Header = () => {
 			<span className='font-semibold text-xl'>
 				<HiOutlineBars3BottomRight />
 			</span>
+			{isSearchModalOpen && <SearchModal />}
 		</nav>
 	);
 };

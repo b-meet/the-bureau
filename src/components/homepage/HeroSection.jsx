@@ -17,7 +17,7 @@ const HeroSection = () => {
 				<div className='absolute bottom-10 left-10 bg-black mix-blend-lighten space-y-4'>
 					<div className='text-xs text-slate-300 flex items-center gap-3'>
 						<span className='tag bg-red-500'>Technology</span>
-						<CreditLine />
+						<CreditLine author={"San Cooper"} isHero={true} />
 					</div>
 					<h1
 						className='text-3xl max-w-[540px] font-semibold'

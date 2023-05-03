@@ -5,6 +5,7 @@ import tempImg from "../../assets/images/hero.jpg";
 import ArticleSnippet from "./ArticleSnippet";
 import { Fragment } from "react";
 import Link from "next/link";
+import routes from "@/RouteConstant";
 
 const topStories = [
 	{
@@ -13,7 +14,7 @@ const topStories = [
 			"Suspects in alleged Markham illeaal casino mansion linked to B.C. casino suspects",
 		snippet:
 			"Alleged criminal activities in Richmond, B.C., and Markham, Ontario have come into focus in recent weeks...",
-		link: "investigations",
+		link: routes.INVESTIGATION,
 		image: "",
 	},
 	{
@@ -23,7 +24,7 @@ const topStories = [
 		snippet:
 			"Xiao Jianhua, a Chinese-Canadian billinaire was abduted in 2017. A Global News investigation has found...",
 		image: "",
-		link: "geopolitics-Finance",
+		link: routes.GEOPOLITICS_FINANCE,
 	},
 	{
 		title: "Health",
@@ -32,7 +33,7 @@ const topStories = [
 		snippet:
 			"Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply...",
 		image: "",
-		link: "health",
+		link: routes.HEALTH,
 	},
 	{
 		title: "Technology",
@@ -41,7 +42,7 @@ const topStories = [
 		snippet:
 			"A letter sent to MP's by Publice Safety Minister Bill Blair has described China's extensive foreign interference...",
 		image: "",
-		link: "technology",
+		link: routes.TECHNOLOGY,
 	},
 	{
 		title: "National Security",
@@ -50,7 +51,7 @@ const topStories = [
 		snippet:
 			"A letter sent to MP's by Publice Safety Minister Bill Blair has described China's extensive foreign interference...",
 		image: "",
-		link: "national-security",
+		link: routes.NATIONAL_SECURITY,
 	},
 	{
 		title: "Op/Analysis",
@@ -59,7 +60,7 @@ const topStories = [
 		snippet:
 			"A letter sent to MP's by Publice Safety Minister Bill Blair has described China's extensive foreign interference...",
 		image: "",
-		link: "op-analysis",
+		link: routes.OP_ANALYSIS,
 	},
 ];
 

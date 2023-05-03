@@ -3,9 +3,33 @@ import Image from "next/image";
 import banner from "../../assets/images/articleBanner.png";
 import Footer from "@/components/global/Footer";
 import TopStory from "@/components/mainTopicPage/TopStory";
-import ArticleSnippet from "@/components/homepage/ArticleSnippet";
+import LatestStories from "@/components/mainTopicPage/LatestStories";
+import { ImArrowUpRight2 } from "react-icons/im";
+import Testimonial from "@/components/global/Testimonial";
 
 const index = () => {
+	const data = [
+		{
+			title: "Why is the world Heaith Organization accused of mishandling the coronavirus",
+			snippet:
+				"Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply...",
+		},
+		{
+			title: "Suspects in alleged Markham illegal casino mansion linked to B.C. casino suspects",
+			snippet:
+				"Alleged criminal activities in Richmond, B.C., and Markham, Ontario have come into focus in recent weeks.",
+		},
+		{
+			title: "MP says he was unaware of CSIS allegations against Iranian businessman when they met",
+			snippet:
+				"A photo posted Wednesday showed Majid Jowhari, MP for Richmond Hill, with Alireza Onghaei, who faces allegations he helped the government of Iran...",
+		},
+		{
+			title: "Suspects in alleged Markham illegal allegations against Iranian businessman when they met",
+			snippet:
+				"MP for Richmond Hill, with Alireza Onghaei, who faces alleged criminal activities allegations, he helped...",
+		},
+	];
 	return (
 		<>
 			<article className='p-10'>
@@ -27,12 +51,35 @@ const index = () => {
 						/>
 					</div>
 					<TopStory />
-					<section className='border-t-2 border-slate-900 pt-6'>
-						<h3 className='text-xl font-semibold'>
-							Latest Op/Analysis articles
-						</h3>
-						<div></div>
+					<LatestStories />
+					<section className='space-y-5 my-14'>
+						{data.map(({ title, snippet }) => (
+							<div className='p-5 space-y-5'>
+								<h4 className='font-semibold text-2xl'>
+									{title}
+								</h4>
+
+								<div className='flex justify-between'>
+									<div className='space-y-4'>
+										<p className='max-w-[350px] min-w-[280px]'>
+											{snippet}
+										</p>
+										<button className='link-with-arrow'>
+											READ ARTICLE
+											<ImArrowUpRight2 />
+										</button>
+									</div>
+									<Image
+										src={banner}
+										alt='story banner'
+										width={400}
+										height={"auto"}
+									/>
+								</div>
+							</div>
+						))}
 					</section>
+					<Testimonial />
 				</main>
 			</article>
 			<Footer />

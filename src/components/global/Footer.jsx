@@ -1,6 +1,9 @@
+import Link from "next/link";
+import routes from "@/RouteConstant";
+
 const Footer = () => {
 	return (
-		<footer className='flex justify-between p-10'>
+		<footer className='flex justify-between p-10 border-t border-slate-900'>
 			<section className='flex-1 space-y-5'>
 				<h1>Logo</h1>
 				<p className='w-[65%] max-w-[350px]'>
@@ -20,18 +23,38 @@ const Footer = () => {
 				<div className='space-y-2'>
 					<h5 className='font-semibold'>Categories</h5>
 					<ul className='space-y-3 text-gray-500 child:cursor-pointer child:max-w-max child-hover:text-black'>
-						<li className='footer-link'>Investigations</li>
-						<li className='footer-link'>Geopolitics & Finance</li>
-						<li className='footer-link'>Health</li>
-						<li className='footer-link'>Technology</li>
-						<li className='footer-link'>National Security</li>
-						<li className='footer-link'>Op/Analysis</li>
+						<li className='footer-link'>
+							<Link href={routes.INVESTIGATION}>
+								Investigations
+							</Link>
+						</li>
+						<li className='footer-link'>
+							<Link href={routes.GEOPOLITICS_FINANCE}>
+								Geopolitics & Finance
+							</Link>
+						</li>
+						<li className='footer-link'>
+							<Link href={routes.HEALTH}>Health</Link>
+						</li>
+						<li className='footer-link'>
+							<Link href={routes.TECHNOLOGY}>Technology</Link>
+						</li>
+						<li className='footer-link'>
+							<Link href={routes.NATIONAL_SECURITY}>
+								National Security
+							</Link>
+						</li>
+						<li className='footer-link'>
+							<Link href={routes.OP_ANALYSIS}>Op/Analysis</Link>
+						</li>
 					</ul>
 				</div>
 				<div className='space-y-2'>
 					<h5 className='font-semibold'>About</h5>
 					<ul className='space-y-3 text-gray-500 child:cursor-pointer child:max-w-max child-hover:text-black'>
-						<li className='footer-link'>About the paper</li>
+						<li className='footer-link'>
+							<Link href={routes.ABOUT}>About the paper</Link>
+						</li>
 						<li className='footer-link'>Contact</li>
 					</ul>
 				</div>
