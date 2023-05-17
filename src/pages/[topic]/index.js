@@ -1,11 +1,13 @@
+import { ImArrowUpRight2 } from "react-icons/im";
+import Link from "next/link";
 import Image from "next/image";
 
 import banner from "../../assets/images/articleBanner.png";
 import Footer from "@/components/global/Footer";
 import TopStory from "@/components/mainTopicPage/TopStory";
 import LatestStories from "@/components/mainTopicPage/LatestStories";
-import { ImArrowUpRight2 } from "react-icons/im";
 import Testimonial from "@/components/global/Testimonial";
+import routes from "@/RouteConstant";
 
 const index = () => {
 	const data = [
@@ -64,10 +66,14 @@ const index = () => {
 										<p className='max-w-[350px] min-w-[280px]'>
 											{snippet}
 										</p>
-										<button className='link-with-arrow'>
-											READ ARTICLE
+										<Link
+											href={`${routes.ARTICLE}${title}`}
+											as={"article/nigga"}
+											className='link-with-arrow'
+										>
+											Read Article
 											<ImArrowUpRight2 />
-										</button>
+										</Link>
 									</div>
 									<Image
 										src={banner}

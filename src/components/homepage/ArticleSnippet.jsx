@@ -1,4 +1,7 @@
+import Link from "next/link";
 import { ImArrowUpRight2 } from "react-icons/im";
+
+import routes from "@/RouteConstant";
 
 const ArticleSnippet = ({ article, isTopStory }) => {
 	const { color, tag, title, snippet } = article;
@@ -9,9 +12,13 @@ const ArticleSnippet = ({ article, isTopStory }) => {
 			<h2 className='font-[500]'>{title}</h2>
 			<p className='text-sm text-slate-700'>{snippet}</p>
 			{!isTopStory && (
-				<button className='link-with-arrow'>
+				<Link
+					className='link-with-arrow'
+					href={`${routes.ARTICLE}${title}`}
+					as={"article/nigga"}
+				>
 					Read article <ImArrowUpRight2 />
-				</button>
+				</Link>
 			)}
 		</section>
 	);

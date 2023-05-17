@@ -1,5 +1,8 @@
 import { ImArrowUpRight2 } from "react-icons/im";
 import { GoPrimitiveDot } from "react-icons/go";
+import Link from "next/link";
+
+import routes from "@/RouteConstant";
 
 const TopStory = () => {
 	return (
@@ -33,10 +36,14 @@ const TopStory = () => {
 					Single masthead nut grat production of innocence YouTube
 					newsonomics dying Like button Nick Denton
 				</p>
-				<button className='link-with-arrow'>
-					READ ARTICLE
+				<Link
+					href={`${routes.ARTICLE}some`}
+					as={"article/nigga"}
+					className='link-with-arrow'
+				>
+					Read Article
 					<ImArrowUpRight2 />
-				</button>
+				</Link>
 			</div>
 		</section>
 	);

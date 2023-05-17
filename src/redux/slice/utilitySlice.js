@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 	isSearchModalOpen: false,
+	isHeaderDropdownOpen: false,
 	isSearchTag: true,
 };
 
@@ -14,6 +15,9 @@ const utilitySlice = createSlice({
 		},
 		toggleSearchTag: (state) => {
 			state.isSearchTag = !state.isSearchTag;
+		},
+		toggleHeaderDropdown: (state) => {
+			state.isHeaderDropdownOpen = !state.isHeaderDropdownOpen;
 		},
 	},
 });

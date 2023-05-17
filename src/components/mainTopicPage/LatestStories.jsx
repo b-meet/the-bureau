@@ -1,6 +1,8 @@
 import { ImArrowUpRight2 } from "react-icons/im";
+import Link from "next/link";
 
 import CreditLine from "../global/CreditLine";
+import routes from "@/RouteConstant";
 
 const data = [
 	{
@@ -41,10 +43,14 @@ const LatestStories = () => {
 						<CreditLine author={author} isHero={false} />
 						<h4 className='font-semibold'>{title}</h4>
 						<p className='text-[15px] text-slate-700'>{snippet}</p>
-						<button className='link-with-arrow'>
-							READ ARTICLE
+						<Link
+							href={`${routes.ARTICLE}${title}`}
+							as={"article/nigga"}
+							className='link-with-arrow'
+						>
+							Read Article
 							<ImArrowUpRight2 />
-						</button>
+						</Link>
 					</div>
 				))}
 			</div>
