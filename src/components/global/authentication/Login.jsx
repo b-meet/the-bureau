@@ -9,7 +9,7 @@ import routes from "@/RouteConstant";
 const Login = () => {
 	const route = useRouter();
 	const handleLogin = () => {
-		route.push(routes.ADMIN);
+		console.log("go to admin");
 	};
 
 	return (

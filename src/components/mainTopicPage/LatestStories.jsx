@@ -37,7 +37,7 @@ const LatestStories = () => {
 			<h3 className='text-xl font-semibold mb-6'>
 				Latest Op/Analysis articles
 			</h3>
-			<div className='flex gap-5 flex-wrap justify-center'>
+			<div className='flex gap-6 flex-wrap justify-center'>
 				{data.map(({ author, title, snippet }) => (
 					<div className='flex-1 space-y-2 min-w-[280px] max-w-[350px]'>
 						<CreditLine author={author} isHero={false} />

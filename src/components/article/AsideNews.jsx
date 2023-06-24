@@ -38,43 +38,49 @@ const AsideNews = () => {
 				<h3 className='text-xl font-semibold p-2 border-b border-slate-900'>
 					Breaking News
 				</h3>
-				{articleData.map((article) => (
-					<div className='p-5 cursor-pointer hover:bg-primary-dark-bg-color'>
-						<ArticleSnippet
-							key={article.title}
-							article={article}
-							isTopStory={true}
-						/>
-					</div>
-				))}
+				<div className='flex flex-wrap justify-center'>
+					{articleData.map((article) => (
+						<div className='py-5 px-0 md:p-5 cursor-pointer hover:bg-primary-dark-bg-color'>
+							<ArticleSnippet
+								key={article.title}
+								article={article}
+								isTopStory={true}
+							/>
+						</div>
+					))}
+				</div>
 			</section>
 			<section>
 				<h3 className='text-xl font-semibold p-2 border-b border-slate-900'>
 					Hot Topics
 				</h3>
-				{articleData.slice(1, 2).map((article) => (
-					<div className='p-5 cursor-pointer hover:bg-primary-dark-bg-color'>
-						<ArticleSnippet
-							key={article.title}
-							article={article}
-							isTopStory={true}
-						/>
-					</div>
-				))}
+				<div className='flex flex-wrap justify-center'>
+					{articleData.slice(1, 2).map((article) => (
+						<div className='py-5 px-0 md:p-5 cursor-pointer hover:bg-primary-dark-bg-color'>
+							<ArticleSnippet
+								key={article.title}
+								article={article}
+								isTopStory={true}
+							/>
+						</div>
+					))}
+				</div>
 			</section>
 			<section>
 				<h3 className='text-xl font-semibold p-2 border-b border-slate-900'>
 					More by author
 				</h3>
-				{articleData.slice(2).map((article) => (
-					<div className='p-5 cursor-pointer hover:bg-primary-dark-bg-color'>
-						<ArticleSnippet
-							key={article.title}
-							article={article}
-							isTopStory={true}
-						/>
-					</div>
-				))}
+				<div className='flex flex-wrap justify-center'>
+					{articleData.slice(2).map((article) => (
+						<div className='py-5 px-0 md:p-5 cursor-pointer hover:bg-primary-dark-bg-color'>
+							<ArticleSnippet
+								key={article.title}
+								article={article}
+								isTopStory={true}
+							/>
+						</div>
+					))}
+				</div>
 			</section>
 		</aside>
 	);

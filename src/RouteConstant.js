@@ -8,7 +8,6 @@ const routes = {
 	ABOUT: "/about",
 	ARTICLE: "/article/",
 	LOGIN: "/login",
-	ADMIN: "/admin",
 };
 
 export default routes;

@@ -7,7 +7,7 @@ const teamData = [
 		title: "UI Developer",
 		description:
 			"DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-		links: { facebook: "", twitter: "", instagram: "" },
+		links: { facebook: "", twitter: "d", instagram: "d" },
 	},
 	{
 		image: "https://dummyimage.com/200x200",
@@ -15,7 +15,7 @@ const teamData = [
 		title: "UI Developer",
 		description:
 			"DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-		links: { facebook: "", twitter: "", instagram: "" },
+		links: { facebook: "d", twitter: "d", instagram: "" },
 	},
 	{
 		image: "https://dummyimage.com/200x200",
@@ -23,7 +23,7 @@ const teamData = [
 		title: "UI Developer",
 		description:
 			"DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-		links: { facebook: "", twitter: "", instagram: "" },
+		links: { facebook: "d", twitter: "", instagram: "d" },
 	},
 	{
 		image: "https://dummyimage.com/200x200",
@@ -31,7 +31,7 @@ const teamData = [
 		title: "UI Developer",
 		description:
 			"DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-		links: { facebook: "", twitter: "", instagram: "" },
+		links: { facebook: "d", twitter: "d", instagram: "d" },
 	},
 	{
 		image: "https://dummyimage.com/200x200",
@@ -39,7 +39,7 @@ const teamData = [
 		title: "UI Developer",
 		description:
 			"DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-		links: { facebook: "", twitter: "", instagram: "" },
+		links: { facebook: "d", twitter: "d", instagram: "" },
 	},
 	{
 		image: "https://dummyimage.com/200x200",
@@ -47,7 +47,7 @@ const teamData = [
 		title: "UI Developer",
 		description:
 			"DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-		links: { facebook: "", twitter: "", instagram: "" },
+		links: { facebook: "d", twitter: "", instagram: "d" },
 	},
 ];
 

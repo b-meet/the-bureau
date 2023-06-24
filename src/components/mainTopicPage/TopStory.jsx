@@ -6,9 +6,9 @@ import routes from "@/RouteConstant";
 
 const TopStory = () => {
 	return (
-		<section className='flex justify-between pt-10 pb-20'>
+		<section className='flex flex-col md:flex-row justify-between pt-10 pb-20'>
 			<div className='space-y-5'>
-				<h2 className='text-2xl font-semibold max-w-xs'>
+				<h2 className='text-2xl font-semibold md:max-w-xs'>
 					China and Russia exploiting high-tech in "hybrid warfare"
 					costs up to $100B per year in Canada
 					<span>- report</span>
@@ -21,7 +21,7 @@ const TopStory = () => {
 					<span>September 23, 2022</span>
 				</div>
 			</div>
-			<div className='flex-[0.85] max-w-[620px] space-y-5'>
+			<div className='flex-1 md:flex-[0.85] md:max-w-[620px] space-y-5'>
 				<p className=''>
 					News is that important, find me Romensko hyperhyperlocal,
 					Zite privacy The Weekender Knight Foundation the notional

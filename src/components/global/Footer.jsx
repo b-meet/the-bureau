@@ -3,15 +3,15 @@ import routes from "@/RouteConstant";
 
 const Footer = () => {
 	return (
-		<footer className='flex justify-between p-10 border-t border-slate-900'>
-			<section className='flex-1 space-y-5'>
+		<footer className='flex flex-col-reverse md:flex-row justify-between p-5 sm:p-10 border-t border-slate-900'>
+			<section className='flex-1 space-y-5 mt-10 md:mt-0'>
 				<h1>Logo</h1>
-				<p className='w-[65%] max-w-[350px]'>
+				<p className=' md:w-[65%] md:max-w-[350px]'>
 					The Paper produces innovative and essential investigative
 					journalism, opinios and analysis. Our mission: Truth above
 					all. The world's best reporting.
 				</p>
-				<div className='flex flex-col'>
+				<div className='flex gap-4 md:gap-0 md:flex-col'>
 					<a href=''>+91 9879654800</a>
 					<a href=''>info@thepaper.com</a>
 				</div>
@@ -19,7 +19,7 @@ const Footer = () => {
 					2023 The paper - All Right Reserved
 				</p>
 			</section>
-			<section className='flex-[1.5] flex justify-around'>
+			<section className='flex-[1.5] flex justify-between flex-wrap gap-5 md:justify-around'>
 				<div className='space-y-2'>
 					<h5 className='font-semibold'>Categories</h5>
 					<ul className='space-y-3 text-gray-500 child:cursor-pointer child:max-w-max child-hover:text-black'>

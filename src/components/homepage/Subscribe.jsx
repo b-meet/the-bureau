@@ -24,11 +24,11 @@ const Subscribe = () => {
 	};
 
 	return (
-		<article className='p-20 bg-slate-950 text-primary-bg-color flex flex-col gap-8 items-center'>
-			<h3 className='text-3xl font-semibold'>
+		<article className='sm:p-20 p-8 bg-slate-950 text-primary-bg-color flex flex-col gap-8 items-center'>
+			<h3 className='text-3xl font-semibold text-center'>
 				Subscribe to Our Newsletter
 			</h3>
-			<p>
+			<p className='text-center'>
 				Engaging copy for member subscription with the CTA to enter
 				email and subscribe.
 			</p>
@@ -42,7 +42,7 @@ const Subscribe = () => {
 						placeholder='Your email'
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						className='w-72 pl-7 py-2 text-xs flex flex-col bg-transparent outline-none border border-primary-bg-color'
+						className='w-64 sm:w-72 pl-7 py-2 text-xs flex flex-col bg-transparent outline-none border border-primary-bg-color'
 					/>
 					{error.email && (
 						<span className='text-xs leading-3'>{error.email}</span>

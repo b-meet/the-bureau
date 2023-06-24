@@ -1,6 +1,6 @@
 const AboutCompany = () => {
 	return (
-		<section className='flex justify-between gap-8 my-12 pb-16 border-b-2 border-slate-900'>
+		<section className='flex md:flex-row flex-col justify-between gap-8 my-12 pb-16 border-b-2 border-slate-900'>
 			<h2 className='font-semibold text-2xl min-w-[300px]'>
 				<span className='font-light italic'>The Paper</span> produces
 				innovative and essential investigative journalism, opinions and

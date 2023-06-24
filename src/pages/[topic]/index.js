@@ -34,15 +34,15 @@ const index = () => {
 	];
 	return (
 		<>
-			<article className='p-10'>
-				<heade className='flex flex-col justify-center items-center space-y-5'>
+			<article className='p-5 sm:p-10'>
+				<header className='flex flex-col justify-center items-center space-y-5'>
 					<h1 className='font-semibold text-[44px]'>Op/Analysis</h1>
 					<p className='max-w-3xl text-center'>
 						A brief paragraph introducing the audience about the
 						investigative journalism articles they'll be able to
 						find in the Op/Analysis category
 					</p>
-				</heade>
+				</header>
 				<main className='mt-10 max-w-max min-w-[90%] m-auto'>
 					<div className='bg-blue-300 w-full'>
 						<Image
@@ -54,13 +54,20 @@ const index = () => {
 					</div>
 					<TopStory />
 					<LatestStories />
-					<section className='space-y-5 my-14'>
+					<section className='space-y-2 sm-space-y-5 my-14'>
 						{data.map(({ title, snippet }) => (
 							<div className='p-5 space-y-5'>
+								<div className='bg-slate-400'>
+									<Image
+										className='lg:hidden'
+										src={banner}
+										alt='story banner'
+										height={"auto"}
+									/>
+								</div>
 								<h4 className='font-semibold text-2xl'>
 									{title}
 								</h4>
-
 								<div className='flex justify-between'>
 									<div className='space-y-4'>
 										<p className='max-w-[350px] min-w-[280px]'>
@@ -76,6 +83,7 @@ const index = () => {
 										</Link>
 									</div>
 									<Image
+										className='hidden lg:inline-block'
 										src={banner}
 										alt='story banner'
 										width={400}

@@ -6,7 +6,7 @@ import Footer from "@/components/global/Footer";
 const About = () => {
 	return (
 		<>
-			<article className='p-10 max-w-7xl m-auto'>
+			<article className='p-5 sm:p-10 max-w-7xl m-auto'>
 				<h1 className='uppercase text-xs text-slate-700'>about us</h1>
 				<AboutCompany />
 				<Founders />

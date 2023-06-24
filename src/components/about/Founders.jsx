@@ -4,7 +4,7 @@ const Founders = () => {
 			<h2 className='uppercase text-xs text-slate-700 mb-8'>
 				about the founder
 			</h2>
-			<section className='flex gap-12'>
+			<section className='flex md:flex-row flex-col items-center gap-12'>
 				<div className='flex flex-col gap-3'>
 					<h3 className='font-semibold text-xl'>Sheldon Cooper</h3>
 					<img

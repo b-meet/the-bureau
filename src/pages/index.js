@@ -8,11 +8,15 @@ export default function Home() {
 	return (
 		<main>
 			<HeroSection />
-			<article className='p-10'>
-				<section className='flex justify-center gap-8 flex-wrap max-w-max m-auto mb-20'>
-					<ArticleSnips />
+			<article className='sm:p-10 p-5'>
+				<section className='flex xl:flex-row flex-col-reverse gap-8'>
+					<section className='flex flex-col justify-between gap-8 xl:flex-1'>
+						<MainHeadLines />
+					</section>
+					<section className='flex flex-wrap xl:flex-col xl:items-center max-w-max overflow-auto gap-12 xl:flex-[0.25]'>
+						<ArticleSnips />
+					</section>
 				</section>
-				<MainHeadLines />
 			</article>
 			<Subscribe />
 			<Footer />

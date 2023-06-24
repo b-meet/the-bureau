@@ -65,13 +65,13 @@ const Header = () => {
 	return (
 		route.asPath !== routes.LOGIN && (
 			<nav
-				className='bg-primary-bg-color flex justify-between items-center px-12 py-3 shadow-md z-40'
+				className='bg-primary-bg-color flex justify-between items-center px-12 py-3 shadow-md z-40 h-[64px]'
 				ref={navRef}
 			>
 				<button onClick={handleSearch} className='font-semibold'>
 					<BsSearch />
 				</button>
-				<ul className='flex gap-10'>
+				<ul className='hidden lg:flex gap-8'>
 					{navbarItems.map(({ title, link }) => (
 						<Link
 							key={title}
@@ -82,7 +82,13 @@ const Header = () => {
 						</Link>
 					))}
 				</ul>
-				<div className='relative'>
+				<Link
+					href={"/"}
+					className='inline-block lg:hidden uppercase py-3 text-xs font-semibold text-gray-500 hover:text-black'
+				>
+					Logo
+				</Link>
+				<div className='relative max-h-[20px]'>
 					<button
 						onClick={handleDropdown}
 						className='font-semibold text-xl'
@@ -90,13 +96,24 @@ const Header = () => {
 						<HiOutlineBars3BottomRight />
 					</button>
 					{isHeaderDropdownOpen && (
-						<div className='bg-primary-bg-color drop-shadow-2xl rounded py-2 min-w-[100px] absolute left-1/2 -translate-x-1/2 top-8 z-40'>
-							<Link
+						<div className='p-4 py-2 bg-primary-bg-color drop-shadow-2xl rounded absolute -right-[3rem] z-40'>
+							{/* <Link
 								href={routes.LOGIN}
 								className='inline-block p-2 w-full hover:bg-primary-dark-bg-color'
 							>
 								Admin
-							</Link>
+							</Link> */}
+							<ul className='flex lg:hidden flex-col p-2'>
+								{navbarItems.map(({ title, link }) => (
+									<Link
+										key={title}
+										href={link}
+										className='uppercase py-2 px-4 text-sm font-semibold text-gray-500 hover:text-black min-w-max'
+									>
+										{title}
+									</Link>
+								))}
+							</ul>
 						</div>
 					)}
 				</div>
